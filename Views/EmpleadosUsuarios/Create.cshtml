@@ -1,0 +1,63 @@
+﻿
+
+@model TsmGdvPrb1.Models.Empleado
+
+<h2>Create</h2>
+
+<form asp-action="Create" method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <div class="form-group">
+        <label asp-for="nombre" class="control-label"></label>
+        <input asp-for="nombre" class="form-control" />
+        <span asp-validation-for="nombre" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="apellido" class="control-label"></label>
+        <input asp-for="apellido" class="form-control" />
+        <span asp-validation-for="apellido" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="ci" class="control-label"></label>
+        <input asp-for="ci" class="form-control" />
+        <span asp-validation-for="ci" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="fecha_nacimiento" class="control-label"></label>
+        <input asp-for="fecha_nacimiento" class="form-control" />
+        <span asp-validation-for="fecha_nacimiento" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="departamento" class="control-label"></label>
+        <input asp-for="departamento" class="form-control" />
+        <span asp-validation-for="departamento" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="fech_contratacion" class="control-label"></label>
+        <input asp-for="fech_contratacion" class="form-control" />
+        <span asp-validation-for="fech_contratacion" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="usuario.nombre_usuario" class="control-label"></label>
+        <input asp-for="usuario.nombre_usuario" class="form-control" />
+        <span asp-validation-for="usuario.nombre_usuario" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="usuario.contrasena" class="control-label"></label>
+        <input asp-for="usuario.contrasena" class="form-control" />
+        <span asp-validation-for="usuario.contrasena" class="text-danger"></span>
+    </div>
+
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary form-control">Crear</button>
+    </div>
+</form>
+

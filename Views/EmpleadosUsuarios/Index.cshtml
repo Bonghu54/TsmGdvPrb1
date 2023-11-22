@@ -1,0 +1,38 @@
+﻿@model List<TsmGdvPrb1.Models.Empleado>
+
+<h2>Lista de Empleados y Usuarios</h2>
+
+<a asp-action="Create" class="btn btn-primary">Registrar Nuevo Empleado y Usuario</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Nombre de Usuario</th>
+            <!-- Agrega más encabezados según sea necesario -->
+        </tr>
+    </thead>
+    <tbody>
+
+        @if (Model.Count() > 0)
+        {
+            @foreach (var empleado in Model)
+            {
+                <tr>
+                    <td>@empleado.nombre</td>
+                    <td>@empleado.apellido</td>
+                    <td>@empleado.usuario.nombre_usuario</td>
+                    <!-- Agrega más celdas según sea necesario -->
+                </tr>
+            }
+
+            
+        }
+        else
+        {
+            <p>No hay Empleados</p>
+        }
+        
+    </tbody>
+</table>
